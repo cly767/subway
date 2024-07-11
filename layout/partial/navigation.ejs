@@ -1,7 +1,7 @@
 <nav id="navigation">
 	<ul id="siteLinks">
 		<% theme.links.forEach(item => { %>
-			<li class="prepared"><a href="<%- item.href %>"><%- item.name %></a></li>
+		<li class="prepared"><a href="<%- item.href %>"<% if(item.external) { %> target="_blank"<% } %>><%- item.name %></a></li>
 		<% }) %>
 	</ul>
 </nav>

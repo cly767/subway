@@ -51,6 +51,18 @@ html, body {
 	}
 }
 
+@media screen and (max-width: 450px) {
+	#header {
+		flex-direction: column-reverse !important;
+	}
+
+	#header .separator { display: none; }
+
+	#navigationToggle {
+		align-self: end !important;
+	}
+}
+
 :root {
 	--bgColor: #fff;
 	--fgColor: #000;
