@@ -1,7 +1,7 @@
 <nav id="navigation">
 	<ul id="siteLinks">
-		<li class="prepared"><a href="/">Home</a></li>
-		<li class="prepared"><a href="/">Tags</a></li>
-		<li class="prepared"><a href="/">About</a></li>
+		<% theme.links.forEach(item => { %>
+			<li class="prepared"><a href="<%- item.href %>"><%- item.name %></a></li>
+		<% }) %>
 	</ul>
 </nav>

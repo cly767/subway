@@ -2,11 +2,11 @@
 	<title>
 		<% if(is_home()) { %>
 			<%= config.title %>
+			<% if(config.subtitle !== '') { %>
+				| <%= config.subtitle %>
+			<% } %>
 		<% } else if(is_post()) { %>
-			<%- page.title %>
-		<% } %>
-		<% if(config.subtitle !== '') { %>
-			| <%= config.subtitle %>
+			<%= page.title %> | <%= config.title %>
 		<% } %>
 	</title>
 	<meta charset="utf-8"/>
