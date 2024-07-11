@@ -1,0 +1,14 @@
+a {
+	text-decoration: none;
+}
+
+.entry {
+	font-size: 48px;
+	font-weight: 100;
+	margin-bottom: 1em;
+}
+
+.postList {
+	list-style-type: none;
+	padding-left: 0;
+}

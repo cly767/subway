@@ -1,0 +1,39 @@
+@media screen and (prefers-color-scheme: dark) {
+	:root {
+		--bgColor: #1e1e1e;
+		--fgColor: #ddd;
+		--bgSecondary: #555;
+		--fgSecondary: #ccc;
+		--selectBgColor: #ddd;
+		--selectFgColor: #1e1e1e;
+	}
+
+	button:hover {
+		background-color: #333;
+	}
+
+	button:active {
+		background-color: var(--fgColor);
+		color: var(--bgColor);
+	}
+
+	button#navigationToggle {
+		background-image: url('/images/menu_light.svg');
+	}
+
+	button#navigationToggle:active {
+		background-image: url('/images/menu.svg');
+	}
+
+	button#navigationToggle.activated {
+		background-image: url('/images/close_light.svg');
+	}
+
+	button#navigationToggle.activated:active {
+		background-image: url('/images/close.svg');
+	}
+
+	a:active {
+		color: #aaa;
+	}
+}

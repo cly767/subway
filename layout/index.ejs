@@ -1,0 +1,17 @@
+<main>
+	<%- partial('partial/navigation') %>
+	<div id="contents">
+		<ul class="postList">
+			<% site.posts.forEach(function(item) { %>
+			<%# for(let item of page.posts) { %>
+			<%# while(false) { %>
+			<li>
+				<article class="entry">
+				<a href="<%- url_for(item.path) %>"><%- item.title %></a>
+				<div class="date"><%- item.date.format('MMM DD, YYYY') %></div>
+				</article>
+			</li>
+			<% }) %>
+		</ul>
+	</div>
+</main>

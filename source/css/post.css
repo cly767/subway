@@ -1,0 +1,104 @@
+@media screen and (prefers-color-scheme: dark) {
+	article img {
+		filter: brightness(.67);
+	}
+}
+
+article p,ol,ul,hr,table,dl {
+	margin-bottom: 1.25em;
+}
+
+article h1 {
+	font-size: 48px;
+	font-weight: 100;
+}
+
+article h2 {
+	font-size: 28.8px;
+	font-weight: 100;
+}
+
+article h3 {
+	font-size: 22px;
+	font-weight: 100;
+}
+
+article h1,h2,h3 {
+	margin-top: 1em;
+	margin-bottom: 0.6em;
+}
+
+article h1:first-child,
+		h2:first-child,
+		h3:first-child {
+			margin-top: 0;
+}
+
+article img {
+	object-fit: contain;
+	max-width: 100%;
+}
+
+article blockquote {
+	border-left: 4px solid var(--bgSecondary);
+	padding-left: 1em;
+}
+
+article figure .codeHeader {
+	padding-bottom: 0.25em;
+	display: flex;
+}
+
+article figure .codeHeader {
+	font-family: 'Roboto Mono', monospace;
+}
+
+article figure table {
+	background-color: var(--codeBgColor);
+	color: var(--codeFgColor);
+	--selectBgColor: white;
+	--selectFgColor: black;
+	font-family: 'Roboto Mono', monospace;
+}
+
+article code {
+	background-color: var(--codeBgColor);
+	color: var(--codeFgColor);
+	padding: 0 0.12em;
+	--selectBgColor: white;
+	--selectFgColor: black;
+	font-family: 'Roboto Mono', monospace;
+}
+
+article ol,ul {
+	padding-left: 1em;
+}
+
+article table {
+	border-collapse: collapse;
+	overflow: auto;
+	display: block;
+}
+
+article > table * {
+	border: 2px solid var(--bgSecondary);
+	padding: 6px 13px;
+}
+
+article dl dt {
+	font-weight: 100;
+	font-size: 22px;
+}
+
+article del::selection {
+	text-decoration: var(--selectFgColor);
+}
+
+article input[type="checkbox"] {
+	width: 1.2em;
+	height: 1.2em;
+}
+
+article figure pre {
+	padding: 10px;
+}

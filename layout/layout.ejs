@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang='<%= config.language %>'>
+	<%- partial('partial/head') %>
+	<body>
+		<div id='pageContainer'>
+			<div class='wrapper'>
+				<%- partial('partial/header') %>
+				<%- body %>
+			</div>
+		</div>
+	</body>
+	<%- js([
+	'/js/navigation.js',
+	'/js/anchor.js'
+	]) %>
+	<% if(is_post()) %>
+	<%- js(['/js/copyCode.js']) %>	
+</html>

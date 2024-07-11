@@ -1,0 +1,19 @@
+<head>
+	<title><%- page.title %></title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width"/>
+	<!-- Roboto from Google Fonts -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Roboto+Mono"/>
+
+	<link rel="stylesheet" href="/css/base.css"/>
+	<link rel="stylesheet" href="/css/dark.css"/>
+	<% if(is_home()) %>
+	<link rel="stylesheet" href="/css/index.css"/>
+	<% if(is_post()) %>
+	<link rel="stylesheet" href="/css/post.css"/>
+
+	<link rel="prefetch" href="/js/navigation.js"/>
+	<link rel="prefetch" href="/js/anchor.js"/>
+	<% if(is_post()) %>
+	<link rel="prefetch" href="/js/copyCode.js"/>
+</head>
