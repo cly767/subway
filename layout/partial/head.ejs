@@ -1,5 +1,14 @@
 <head>
-	<title><%- page.title %></title>
+	<title>
+		<% if(is_home()) { %>
+			<%= config.title %>
+		<% } else if(is_post()) { %>
+			<%- page.title %>
+		<% } %>
+		<% if(config.subtitle !== '') { %>
+			| <%= config.subtitle %>
+		<% } %>
+	</title>
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width"/>
 	<!-- Roboto from Google Fonts -->
@@ -7,13 +16,15 @@
 
 	<link rel="stylesheet" href="/css/base.css"/>
 	<link rel="stylesheet" href="/css/dark.css"/>
-	<% if(is_home()) %>
+	<% if(is_home()) { %>
 	<link rel="stylesheet" href="/css/index.css"/>
-	<% if(is_post()) %>
+	<% } else if(is_post()) { %>
 	<link rel="stylesheet" href="/css/post.css"/>
+	<% } %>
 
 	<link rel="prefetch" href="/js/navigation.js"/>
 	<link rel="prefetch" href="/js/anchor.js"/>
-	<% if(is_post()) %>
+	<% if(is_post()) { %>
 	<link rel="prefetch" href="/js/copyCode.js"/>
+	<% } %>
 </head>

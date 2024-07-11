@@ -1,6 +1,15 @@
 <header id="header">
 	<div class="titleWrapper">
-		<h1 class="title">Subway Prototype</h1>
+		<h1 class="title">
+			<% if(is_home()) { %>
+				<%= config.title %>
+			<% } else if(is_post()) { %>
+				<%- page.title %>
+			<% } %>
+		</h1>
+		<% if(is_post()) { %>
+		<div class="date"><%- page.date.format('MMM DD, YYYY') %></div>
+		<% } %>
 	</div>
 	<div class="separator"></div>
 	<button id="navigationToggle" aria-label="Activate this to toggle navigation. 激活此按钮以切换站点导航。"></button>
