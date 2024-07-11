@@ -50,7 +50,7 @@ article figure .codeHeader {
 }
 
 article figure .codeHeader {
-	font-family: 'Roboto Mono', monospace;
+	font-family: 'Roboto Mono', 'Courier New', Courier, monospace;
 }
 
 article figure table {
@@ -58,7 +58,7 @@ article figure table {
 	color: var(--codeFgColor);
 	--selectBgColor: white;
 	--selectFgColor: black;
-	font-family: 'Roboto Mono', monospace;
+	font-family: 'Roboto Mono', 'Courier New', Courier, monospace;
 }
 
 article code {
@@ -67,7 +67,7 @@ article code {
 	padding: 0 0.12em;
 	--selectBgColor: white;
 	--selectFgColor: black;
-	font-family: 'Roboto Mono', monospace;
+	font-family: 'Roboto Mono', 'Courier New', Courier, monospace;
 }
 
 article ol,ul {
