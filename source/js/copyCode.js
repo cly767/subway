@@ -20,7 +20,11 @@ function setupCopyCode() {
 		copyCode.innerText = 'COPY';
 		copyCode.classList.add('outlined');
 		copyCode.addEventListener('click', e => {
-			navigator.clipboard.writeText(codeTable.getElementsByClassName('code')[0].innerText);
+			let codeContent = codeTable.getElementsByClassName('code')[0].innerText;
+			// we won't include the trailing '\n'
+			// in order to prevent 'automatic command executation'
+			let codeLength = codeContent.length - 1;
+			navigator.clipboard.writeText(codeContent.substring(0, codeLength));
 		});
 
 		codeHeader.append(codeLang, separator, copyCode);

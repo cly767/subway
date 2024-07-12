@@ -1,5 +1,5 @@
 'use strict';
-function setupAnchorAnimation() {
+function setupAnchor() {
 	let ali = document.getElementsByTagName('a');
 	let pageContainer = document.getElementById('pageContainer');
 	for( let i of ali )
@@ -17,4 +17,4 @@ function setupAnchorAnimation() {
 	});
 }
 
-setupAnchorAnimation();
+setupAnchor();

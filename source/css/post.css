@@ -58,6 +58,7 @@ article figure table {
 	color: var(--codeFgColor);
 	--selectBgColor: white;
 	--selectFgColor: black;
+	scrollbar-color: var(--fgSecondary) var(--codeBgColor);
 }
 
 article figure pre {
