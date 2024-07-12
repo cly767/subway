@@ -58,10 +58,13 @@ article figure table {
 	color: var(--codeFgColor);
 	--selectBgColor: white;
 	--selectFgColor: black;
-	font-family: 'Roboto Mono', 'Courier New', Courier, monospace;
 }
 
-article code {
+article figure pre {
+	padding: 10px;
+}
+
+article code pre {
 	background-color: var(--codeBgColor);
 	color: var(--codeFgColor);
 	padding: 0 0.12em;
@@ -97,8 +100,4 @@ article del::selection {
 article input[type="checkbox"] {
 	width: 1.2em;
 	height: 1.2em;
-}
-
-article figure pre {
-	padding: 10px;
 }
