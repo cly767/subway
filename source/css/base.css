@@ -56,7 +56,9 @@ html, body {
 		flex-direction: column-reverse !important;
 	}
 
-	#header .separator { display: none; }
+	#header .separator {
+		display: none !important;
+	}
 
 	#navigationToggle {
 		align-self: end !important;

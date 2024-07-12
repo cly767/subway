@@ -1,0 +1,13 @@
+links:
+  -
+    name: 'Home'
+    href: '/'
+  -
+    name: 'About'
+    href: '/about/'
+  -
+    name: 'example.com'
+    href: 'https://example.com'
+    # open this link in a new tab
+    external: true
+
