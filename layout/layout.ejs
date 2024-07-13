@@ -9,10 +9,8 @@
 			</div>
 		</div>
 	</body>
-	<%- js([
-	'/js/navigation.js',
-	'/js/anchor.js'
-	]) %>
-	<% if(is_post()) %>
-	<%- js(['/js/copyCode.js']) %>	
+	<script src="/js/navigation.js"></script>
+	<script src="/js/anchor.js"></script>
+	<% if(is_post() || is_page()) %>
+		<script src="/js/copyCode.js"></script>
 </html>

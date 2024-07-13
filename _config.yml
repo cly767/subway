@@ -1,3 +1,5 @@
+# example config.
+# edit to your own preference.
 links:
   -
     name: 'Home'
@@ -8,6 +10,15 @@ links:
   -
     name: 'example.com'
     href: 'https://example.com'
-    # open this link in a new tab
+    # open this in a new tab
     external: true
 
+notes:
+  -
+    content: 'Theme by subway.'
+    href: 'https://github.com/cly767/subway'
+    external: true
+  -
+    content: 'Add whatever you like here.'
+    href: 'https://example.com'
+    external: true

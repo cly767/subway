@@ -14,9 +14,10 @@ function setupNavigation() {
 	updateState(mql);
 
 	// getting stuff
-	let navigation= document.getElementById('navigation');
+	let navigation = document.getElementById('navigation');
 	let navigationToggle = document.getElementById('navigationToggle');
 	let siteLinks = document.getElementById('siteLinks');
+	let linkList = navigation.getElementsByTagName('li');
 	let contents = document.getElementById('contents');
 	let timerid;
 
@@ -26,7 +27,7 @@ function setupNavigation() {
 		timerid = setInterval(() => {
 			linkList[i].classList.remove('prepared');
 			// we've reached the end
-			if(i >= linkList.length -1) {
+			if(i >= linkList.length - 1) {
 				clearInterval(timerid);
 				return;
 			}
@@ -47,21 +48,21 @@ function setupNavigation() {
 		navigationToggle.classList.add('activated');
 		// fade out
 		contents.classList.add('transparent')
-		if(!animate) showSiteLinks(siteLinks.children);
+		if(!animate) showSiteLinks(linkList);
 		setTimeout(linkList => {
 			// activate the navigation layer
 			navigation.classList.add('activated');
 			// hide the contents
 			contents.classList.add('truncated');
 			if(animate) showSiteLinks(linkList);
-		}, 100, siteLinks.children);
+		}, 100, linkList);
 	}
 
 	function leaveNavigation(e) {
 		// we're leaving, so stop entering
 		clearInterval(timerid);
 		// restore the link list
-		prepareSiteLinks(siteLinks.children);
+		prepareSiteLinks(linkList);
 		// deactivate the button
 		navigationToggle.classList.remove('activated');
 		// deactivate the navigation layer

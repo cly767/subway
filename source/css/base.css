@@ -162,7 +162,7 @@ nav#navigation.activated {
 	pointer-events: auto;
 }
 
-nav#navigation ul#siteLinks {
+nav#navigation ul#siteLinks,ul#notes {
 	list-style-type: none;
 	padding: 0;
 	height: auto;
@@ -175,6 +175,12 @@ nav#navigation li {
 	transition-duration: 1.2s;
 	transition-timing-function: var(--easeOutExpo);
 	margin-bottom: 0.27em;
+}
+
+nav#navigation ul#notes li {
+	display: inline-block;
+	font-size: 28px;
+	margin-bottom: 0;
 }
 
 nav#navigation li.prepared {

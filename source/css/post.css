@@ -1,3 +1,4 @@
+/* shared CSS for pages and posts. */
 @media screen and (prefers-color-scheme: dark) {
 	article img {
 		filter: brightness(.67);

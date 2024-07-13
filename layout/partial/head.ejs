@@ -5,7 +5,7 @@
 			<% if(config.subtitle !== '') { %>
 				| <%= config.subtitle %>
 			<% } %>
-		<% } else if(is_post()) { %>
+		<% } else { %>
 			<%= page.title %> | <%= config.title %>
 		<% } %>
 	</title>
@@ -18,13 +18,13 @@
 	<link rel="stylesheet" href="/css/dark.css"/>
 	<% if(is_home()) { %>
 	<link rel="stylesheet" href="/css/index.css"/>
-	<% } else if(is_post()) { %>
+	<% } else if(is_post() || is_page()) { %>
 	<link rel="stylesheet" href="/css/post.css"/>
 	<% } %>
 
 	<link rel="prefetch" href="/js/navigation.js"/>
 	<link rel="prefetch" href="/js/anchor.js"/>
-	<% if(is_post()) { %>
+	<% if(is_post() || is_page()) { %>
 	<link rel="prefetch" href="/js/copyCode.js"/>
 	<% } %>
 </head>
