@@ -20,4 +20,4 @@
 
 ## License
 
-TBD
+MIT

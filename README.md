@@ -20,4 +20,4 @@ This project is not affiliated with, or supported by, Microsoft.
 
 ## License
 
-TBD
+MIT
