@@ -1,5 +1,15 @@
 /* shared CSS for pages and posts. */
+:root {
+	--codeBgColor: #eaeaea;
+	--codeFgColor: black;
+}
+
 @media screen and (prefers-color-scheme: dark) {
+	:root {
+		--codeBgColor: #333;
+		--codeFgColor: white;
+	}
+
 	article img {
 		filter: brightness(.67);
 	}
@@ -67,12 +77,15 @@ article figure pre {
 }
 
 article code pre {
+	font-family: 'Roboto Mono', 'Courier New', Courier, monospace;
+}
+
+article code {
 	background-color: var(--codeBgColor);
 	color: var(--codeFgColor);
-	padding: 0 0.12em;
 	--selectBgColor: white;
 	--selectFgColor: black;
-	font-family: 'Roboto Mono', 'Courier New', Courier, monospace;
+	padding: 0 0.12em;
 }
 
 article ol,ul {

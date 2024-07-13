@@ -72,8 +72,6 @@ html, body {
 	--fgSecondary: #555;
 	--selectBgColor: black;
 	--selectFgColor: #f0f0f0;
-	--codeBgColor: #333;
-	--codeFgColor: white;
 	--easeOutExpo: cubic-bezier(0.19, 1, 0.22, 1);
 	--pagePadding: 80px;
 	--pageWidth: min(870px, 87%);
