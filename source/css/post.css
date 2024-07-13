@@ -67,8 +67,8 @@ article figure .codeHeader {
 article figure table {
 	background-color: var(--codeBgColor);
 	color: var(--codeFgColor);
-	--selectBgColor: white;
-	--selectFgColor: black;
+	--selectBgColor: black;
+	--selectFgColor: white;
 	scrollbar-color: var(--fgSecondary) var(--codeBgColor);
 }
 
@@ -76,15 +76,16 @@ article figure pre {
 	padding: 10px;
 }
 
-article code pre {
+article code,pre {
 	font-family: 'Roboto Mono', 'Courier New', Courier, monospace;
+	line-height: 23px;
 }
 
 article code {
 	background-color: var(--codeBgColor);
 	color: var(--codeFgColor);
-	--selectBgColor: white;
-	--selectFgColor: black;
+	--selectBgColor: black;
+	--selectFgColor: white;
 	padding: 0 0.12em;
 }
 
