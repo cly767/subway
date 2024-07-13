@@ -12,7 +12,7 @@
 
 - [`hexo-theme-oranges`](https://github.com/zchengsite/hexo-theme-oranges): 一个简单的 hexo 主题。从中获取了 ejs 和 Hexo 的基础知识。
 - [`hexo-theme-leedom`](https://github.com/leedom92/hexo-theme-leedom): 「仿照尤雨溪博客的简洁的Hexo主题」。我在启动这个项目之前使用的是这个主题。
-- [MDx 中增强页面可访问性的细节](https://flyhigher.top/develop/1912.html): 从中获取了 web 无障碍的指导。
+- [Axton 写的 MDx 中增强页面可访问性的细节](https://flyhigher.top/develop/1912.html): 从中获取了 web 无障碍的指导。
 
 ## 免责声明
 

@@ -12,7 +12,7 @@ It aims to be:
 
 - [`hexo-theme-oranges`](https://github.com/zchengsite/hexo-theme-oranges): A simple hexo theme of minimalism. For fundamentals on ejs and many other things about Hexo.
 - [`hexo-theme-leedom`](https://github.com/leedom92/hexo-theme-leedom): A pure theme of Hexo like Evan You's blog. I used `leedom` before starting this project.
-- [MDx 中增强页面可访问性的细节](https://flyhigher.top/develop/1912.html): For instruction on a11y stuff.
+- [MDx 中增强页面可访问性的细节 by Axton](https://flyhigher.top/develop/1912.html): For instruction on a11y stuff.
 
 ## Disclaimer
 
