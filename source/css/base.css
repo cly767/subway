@@ -62,6 +62,8 @@ html, body {
 
 	#navigationToggle {
 		align-self: end !important;
+		height: 60px !important;
+		width: 60px !important;
 	}
 }
 
@@ -117,7 +119,7 @@ button:active {
 	color: var(--bgColor);
 }
 
-button#navigationToggle {
+#navigationToggle {
 	width: 65px;
 	height: 65px;
 	overflow: clip;
@@ -128,15 +130,15 @@ button#navigationToggle {
 	flex-shrink: 0;
 }
 
-button#navigationToggle:active {
+#navigationToggle:active {
 	background-image: url('/images/menu_light.svg');
 }
 
-button#navigationToggle.activated {
+#navigationToggle.activated {
 	background-image: url('/images/close.svg');
 }
 
-button#navigationToggle.activated:active {
+#navigationToggle.activated:active {
 	background-image: url('/images/close_light.svg');
 }
 
@@ -197,6 +199,7 @@ nav#navigation a { text-decoration: none; }
 
 div.wrapper {
 	width: var(--pageWidth);
+	flex-shrink: 0;
 }
 
 div.titleWrapper {
