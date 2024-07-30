@@ -11,6 +11,19 @@
 	</body>
 	<script src="/js/navigation.js"></script>
 	<script src="/js/anchor.js"></script>
-	<% if(is_post() || is_page()) %>
+	<% if(is_post() || is_page()) { %>
 		<script src="/js/copyCode.js"></script>
+	<% } %>
+	<script>
+function requestSCFont() {
+	let pageContainer = document.getElementById('pageContainer');
+	let SCContent = pageContainer.innerText.replace(/[^\u4E00-\u9FA5·～！￥…（）—『』【】、：；‘’“”，。《》？]/gi,'');
+	let requestURL = "https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,400,700&text=" + SCContent;
+	let link = document.createElement('link');
+	link.href = requestURL;
+	link.rel = 'stylesheet';
+	document.getElementsByTagName('head')[0].append(link);
+}
+requestSCFont();
+	</script>
 </html>
