@@ -2,6 +2,9 @@
 
 A Hexo theme inspired by the Metro UI.
 
+> [!NOTE]
+> Optimized for **English & Simplified Chinese**. You could do it yourself if you're in another language.
+
 It aims to be:
 
 - lightweight and dependency-free.
