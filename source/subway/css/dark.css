@@ -17,22 +17,6 @@
 		color: var(--bgColor);
 	}
 
-	button#navigationToggle {
-		background-image: url('/subway/images/menu_light.svg');
-	}
-
-	button#navigationToggle:active {
-		background-image: url('/subway/images/menu.svg');
-	}
-
-	button#navigationToggle.activated {
-		background-image: url('/subway/images/close_light.svg');
-	}
-
-	button#navigationToggle.activated:active {
-		background-image: url('/subway/images/close.svg');
-	}
-
 	a:active {
 		color: #aaa;
 	}

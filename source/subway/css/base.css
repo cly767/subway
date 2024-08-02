@@ -60,11 +60,7 @@ html, body {
 		display: none !important;
 	}
 
-	#navigationToggle {
-		align-self: end !important;
-		height: 60px !important;
-		width: 60px !important;
-	}
+	#navigationToggle { align-self: end !important; }
 }
 
 :root {
@@ -120,26 +116,46 @@ button:active {
 }
 
 #navigationToggle {
-	width: 65px;
-	height: 65px;
+	width: 60px;
+	height: 60px;
 	overflow: clip;
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-image: url('/subway/images/menu.svg');
 	align-self: center;
 	flex-shrink: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
-#navigationToggle:active {
-	background-image: url('/subway/images/menu_light.svg');
+#navigationToggle .bar {
+	height: 3px;
+	width: 70%;
+	transform-origin: center center;
+	background-color: var(--fgColor);
 }
 
-#navigationToggle.activated {
-	background-image: url('/subway/images/close.svg');
+#navigationToggle:active .bar {
+	background-color: var(--bgColor);
 }
 
-#navigationToggle.activated:active {
-	background-image: url('/subway/images/close_light.svg');
+#navigationToggle .bar:nth-child(1) {
+	margin-bottom: 5px;
+}
+
+#navigationToggle .bar:nth-child(3) {
+	margin-top: 5px;
+}
+
+#navigationToggle.activated .bar:nth-child(1) {
+	transform: translateY(6.5px) rotateZ(45deg) ;
+}
+
+#navigationToggle.activated .bar:nth-child(2) {
+	display: none;
+}
+
+#navigationToggle.activated .bar:nth-child(3) {
+	transform: translateY(-6.5px) rotateZ(-45deg) ;
 }
 
 a { color: var(--fgColor); }
@@ -191,7 +207,7 @@ nav#navigation li.prepared {
 nav#navigation a { text-decoration: none; }
 
 #contents {
-	font-size: larger;
+	font-size: 18px;
 	transition: opacity .1s linear;
 	padding-bottom: 2.5em;
 	overflow: clip;
