@@ -18,19 +18,19 @@
 	}
 
 	button#navigationToggle {
-		background-image: url('/images/menu_light.svg');
+		background-image: url('/subway/images/menu_light.svg');
 	}
 
 	button#navigationToggle:active {
-		background-image: url('/images/menu.svg');
+		background-image: url('/subway/images/menu.svg');
 	}
 
 	button#navigationToggle.activated {
-		background-image: url('/images/close_light.svg');
+		background-image: url('/subway/images/close_light.svg');
 	}
 
 	button#navigationToggle.activated:active {
-		background-image: url('/images/close.svg');
+		background-image: url('/subway/images/close.svg');
 	}
 
 	a:active {

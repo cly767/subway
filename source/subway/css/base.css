@@ -125,21 +125,21 @@ button:active {
 	overflow: clip;
 	background-size: contain;
 	background-repeat: no-repeat;
-	background-image: url('/images/menu.svg');
+	background-image: url('/subway/images/menu.svg');
 	align-self: center;
 	flex-shrink: 0;
 }
 
 #navigationToggle:active {
-	background-image: url('/images/menu_light.svg');
+	background-image: url('/subway/images/menu_light.svg');
 }
 
 #navigationToggle.activated {
-	background-image: url('/images/close.svg');
+	background-image: url('/subway/images/close.svg');
 }
 
 #navigationToggle.activated:active {
-	background-image: url('/images/close_light.svg');
+	background-image: url('/subway/images/close_light.svg');
 }
 
 a { color: var(--fgColor); }
