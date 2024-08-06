@@ -12,3 +12,9 @@ a {
 	list-style-type: none;
 	padding-left: 0;
 }
+
+#paginator {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
