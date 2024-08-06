@@ -18,7 +18,7 @@ html, body {
 }
 
 @media print {
-	button, nav {
+	button, .button, nav {
 		display: none;
 	}
 
@@ -97,7 +97,7 @@ html, body {
 	padding-bottom: 0;
 }
 
-button {
+button, .button {
 	letter-spacing: 0.08em;
 	font-weight: 700;
 	padding: 0.7em;
@@ -106,11 +106,13 @@ button {
 	border: none;
 }
 
-button:hover {
+.button { display: inline-block; }
+
+button:hover, .button:hover {
 	background-color: #dfdfdf;
 }
 
-button:active {
+button:active, .button:active {
 	background-color: var(--fgColor);
 	color: var(--bgColor);
 }
@@ -158,9 +160,9 @@ button:active {
 	transform: translateY(-6.5px) rotateZ(-45deg) ;
 }
 
-a { color: var(--fgColor); }
-a:hover { color: var(--fgSecondary); }
-a:active { color: #888; }
+a:not(a.button) { color: var(--fgColor); }
+a:hover:not(a.button) { color: var(--fgSecondary); }
+a:active:not(a.button) { color: #888; }
 
 nav#navigation {
 	display: block;
@@ -208,9 +210,13 @@ nav#navigation a { text-decoration: none; }
 
 #contents {
 	font-size: 18px;
-	transition: opacity .1s linear;
-	padding-bottom: 2.5em;
 	overflow: clip;
+}
+
+#postNavigation { transition: opacity .1s linear; }
+
+#body {
+	padding-bottom: 2.5em;
 }
 
 div.wrapper {
@@ -223,7 +229,7 @@ div.titleWrapper {
 	flex-direction: column;
 }
 
-#pageContainer {
+#container {
 	width: 100%;
 	display: flex;
 	flex-direction: column;

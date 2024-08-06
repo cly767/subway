@@ -1,15 +1,23 @@
-<main>
-	<%- partial('partial/navigation') %>
-	<div id="contents">
-		<ul class="postList">
-			<% page.posts.forEach(function(item) { %>
-			<li>
-				<article class="entry">
-				<a href="<%- url_for(item.path) %>"><%- item.title %></a>
-				<div class="date"><%- item.date.format('MMM DD, YYYY') %></div>
-				</article>
-			</li>
-			<% }) %>
-		</ul>
-	</div>
+<main id="contents">
+	<ul class="postList">
+		<% page.posts.forEach(function(item) { %>
+		<li>
+			<article class="entry">
+			<a href="<%- url_for(item.path) %>"><%- item.title %></a>
+			<div class="date"><%- item.date.format('MMM DD, YYYY') %></div>
+			</article>
+		</li>
+		<% }) %>
+	</ul>
 </main>
+<div id="paginator">
+	<% if(page.prev !== 0) { %>
+	<a class="button outlined" href="<%- url_for(page.prev_link) %>">PREV</a>
+	<% } %>
+	<div class="separator"></div>
+	<span id="indicator"><%= page.current %> / <%= page.total %></span>
+	<div class="separator"></div>
+	<% if(page.next !== 0) { %>
+	<a class="button outlined" href="<%- url_for(page.next_link) %>">NEXT</a>
+	<% } %>
+</div>

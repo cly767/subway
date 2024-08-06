@@ -18,7 +18,7 @@ function setupNavigation() {
 	let navigationToggle = document.getElementById('navigationToggle');
 	let siteLinks = document.getElementById('siteLinks');
 	let linkList = navigation.getElementsByTagName('li');
-	let contents = document.getElementById('contents');
+	let postNavigation = document.getElementById('postNavigation');
 	let timerid;
 
 	function showSiteLinks(linkList) {
@@ -47,13 +47,13 @@ function setupNavigation() {
 		// activate the button
 		navigationToggle.classList.add('activated');
 		// fade out
-		contents.classList.add('transparent')
+		postNavigation.classList.add('transparent')
 		if(!animate) showSiteLinks(linkList);
 		setTimeout(linkList => {
 			// activate the navigation layer
 			navigation.classList.add('activated');
-			// hide the contents
-			contents.classList.add('truncated');
+			// hide the post-navigation things
+			postNavigation.classList.add('truncated');
 			if(animate) showSiteLinks(linkList);
 		}, 100, linkList);
 	}
@@ -70,8 +70,8 @@ function setupNavigation() {
 		// wait for the links to disappear
 		setTimeout(() => {
 			// show & fade in
-			contents.classList.remove('truncated');
-			contents.classList.remove('transparent');
+			postNavigation.classList.remove('truncated');
+			postNavigation.classList.remove('transparent');
 			// re-register event listeners
 			navigationToggle.removeEventListener('click', leaveNavigation);
 			navigationToggle.addEventListener('click', enterNavigation);
