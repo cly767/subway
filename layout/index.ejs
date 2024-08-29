@@ -11,13 +11,13 @@
 	</ul>
 </main>
 <div id="paginator">
+	<div id="indicator">Page <%= page.current %>, Total <%= page.total %>.</div>
+	<div id="paginator-controls">
 	<% if(page.prev !== 0) { %>
 	<a class="button outlined" href="<%- url_for(page.prev_link) %>">PREV</a>
 	<% } %>
-	<div class="separator"></div>
-	<span id="indicator"><%= page.current %> / <%= page.total %></span>
-	<div class="separator"></div>
 	<% if(page.next !== 0) { %>
 	<a class="button outlined" href="<%- url_for(page.next_link) %>">NEXT</a>
 	<% } %>
+	</div>
 </div>
