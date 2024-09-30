@@ -212,7 +212,10 @@ nav#navigation a { text-decoration: none; }
 	overflow: clip;
 }
 
-#postNavigation { transition: opacity .1s linear; }
+#postNavigation {
+	transition: opacity .1s linear;
+	overflow: hidden;
+}
 
 #body {
 	padding-bottom: 2.5em;
