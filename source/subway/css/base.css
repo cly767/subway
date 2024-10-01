@@ -91,9 +91,13 @@ html, body {
 
 .transparent { opacity: 0; }
 
-.truncated {
-	height: 0;
-	padding-bottom: 0;
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	height: 100%;
+	width: 100%;
 }
 
 button, .button {
@@ -147,7 +151,7 @@ button:active, .button:active {
 	margin-top: 5px;
 }
 
-#navigationToggle.activated .bar:nth-child(1) {
+/* #navigationToggle.activated .bar:nth-child(1) {
 	transform: translateY(6.5px) rotateZ(45deg) ;
 }
 
@@ -157,40 +161,45 @@ button:active, .button:active {
 
 #navigationToggle.activated .bar:nth-child(3) {
 	transform: translateY(-6.5px) rotateZ(-45deg) ;
-}
+} */
 
 a:not(a.button) { color: var(--fgColor); }
 a:hover:not(a.button) { color: var(--fgSecondary); }
 a:active:not(a.button) { color: #888; }
 
-nav#navigation {
-	display: block;
-	position: absolute;
-	width: var(--pageWidth);
+aside#drawer {
+	background-color: #1e1e1e;
+	border-left: 2px solid #ddd;
+	width: 500px;
+	height: 100%;
+	position: fixed;
+	left: 100%;
 	z-index: 1;
-	transition: opacity .1s linear;
-	background-color: var(--bgColor);
-	opacity: 0;
-	pointer-events: none;
+	transition: left 1s var(--easeOutExpo);
+	padding: 80px 20px;
 }
 
-nav#navigation.activated {
-	opacity: 1;
-	pointer-events: auto;
+aside#drawer.activated {
+	left: calc(100% - 500px);
 }
 
 nav#navigation ul#siteLinks,ul#notes {
 	list-style-type: none;
 	padding: 0;
 	height: auto;
+	transition-property: translate opacity;
+	transition-duration: 1s;
+	transition-timing-function: var(--easeOutExpo);
+}
+
+nav#navigation ul#siteLinks.prepared,ul#notes.prepared {
+	translate: 36px;
+	opacity: 0;
 }
 
 nav#navigation li {
 	font-size: 48px;
 	font-weight: 100;
-	transition-property: transform, opacity;
-	transition-duration: 1.2s;
-	transition-timing-function: var(--easeOutExpo);
 	margin-bottom: 0.27em;
 }
 
@@ -200,21 +209,16 @@ nav#navigation ul#notes li {
 	margin-bottom: 0;
 }
 
-nav#navigation li.prepared {
-	transform: translateY(36px);
-	opacity: 0;
+nav#navigation a {
+	color: #ddd;
+	text-decoration: none;
 }
-
-nav#navigation a { text-decoration: none; }
+nav#navigation a:hover { color: #ccc; }
+nav#navigation a:active { color: #aaa; }
 
 #contents {
 	font-size: 18px;
 	overflow: clip;
-}
-
-#postNavigation {
-	transition: opacity .1s linear;
-	overflow: hidden;
 }
 
 #body {
@@ -224,6 +228,7 @@ nav#navigation a { text-decoration: none; }
 div.wrapper {
 	width: var(--pageWidth);
 	flex-shrink: 0;
+	padding-bottom: 60px;
 }
 
 div.titleWrapper {

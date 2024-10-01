@@ -1,0 +1,14 @@
+<aside id="drawer">
+	<nav id="navigation">
+		<ul id="siteLinks" class="prepared">
+			<% theme.links.forEach(item => { %>
+			<li><a href="<%- item.href %>"<% if(item.external) { %> target="_blank"<% } %>><%- item.name %></a></li>
+			<% }) %>
+		</ul>
+		<ul id="notes" class="prepared">
+			<% theme.notes.forEach(item => { %>
+			<li><a <% if(item.href) { %>href="<%- item.href %>"<% } %><% if(item.external) { %> target="_blank"<% } %>><%- item.content %></a><% if(item !== theme.notes[theme.notes.length - 1]) { %> | <% } _%></li>
+			<% }) %>
+		</ul>
+	</nav>
+</aside>

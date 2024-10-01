@@ -2,15 +2,11 @@
 <html lang='<%= config.language %>'>
 	<%- partial('partial/head') %>
 	<body>
+		<%- partial('partial/drawer') %>
 		<div id='container'>
 			<div class='wrapper'>
 				<%- partial('partial/header') %>
-				<div id="body">
-					<%- partial('partial/navigation') %>
-					<div id="postNavigation">
-						<%- body %>
-					</div>
-				</div>
+				<%- body %>
 			</div>
 		</div>
 	</body>
