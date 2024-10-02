@@ -1,7 +1,9 @@
 'use strict';
 function setupNavigation() {
 	// getting stuff
-	let navigationToggle = document.getElementById('navigationToggle');
+	let container = document.getElementById('container');
+	let navigationEnter = document.getElementById('navigationEnter');
+	let navigationQuit = document.getElementById('navigationQuit');
 	let drawer = document.getElementById('drawer');
 	let navigation = document.getElementById('navigation');
 	let siteLinks = document.getElementById('siteLinks');
@@ -31,20 +33,22 @@ function setupNavigation() {
 
 	function enterNavigation(e) {
 		// re-register event listeners
-		navigationToggle.removeEventListener('click', enterNavigation);
-		navigationToggle.addEventListener('click', leaveNavigation);
+		navigationEnter.removeEventListener('click', enterNavigation);
+		navigationEnter.addEventListener('click', leaveNavigation);
 		attachOverlay();
+		container.classList.add('pressed');
 		drawer.classList.add('activated');
-		shift1by1(Array(siteLinks, notes));
+		shift1by1(drawer.children);
 	}
 
 	function leaveNavigation(e) {
 		// we're leaving, so stop entering
 		clearInterval(timerid);
-		navigationToggle.removeEventListener('click', leaveNavigation);
-		navigationToggle.addEventListener('click', enterNavigation);
-		restoreShift(Array(siteLinks, notes));
+		navigationEnter.removeEventListener('click', leaveNavigation);
+		navigationEnter.addEventListener('click', enterNavigation);
+		restoreShift(drawer.children);
 		drawer.classList.remove('activated');
+		container.classList.remove('pressed');
 		overlay.remove();
 	}
 
@@ -56,7 +60,8 @@ function setupNavigation() {
 	}
 
 	// register event listener
-	navigationToggle.addEventListener('click', enterNavigation);
+	navigationEnter.addEventListener('click', enterNavigation);
+	navigationQuit.addEventListener('click', leaveNavigation);
 }
 
 setupNavigation();

@@ -1,19 +1,22 @@
 'use strict';
 function setupAnchor() {
 	let ali = document.getElementsByTagName('a');
-	let container = document.getElementById('container');
+	let wrapper = document.getElementById('wrapper');
+	let drawer = document.getElementById('drawer');
 	for( let i of ali )
 		i.addEventListener('click', e => {
 			if(e.target.target === '' || e.target.target === '_self') {
 				e.preventDefault();
-				container.classList.add('transparent');
+				wrapper.classList.add('transparent');
+				drawer.classList.add('transparent');
 				setTimeout(() => {
 					window.location.assign(e.target.href);
 				}, 100);
 			}
 		});
 	window.addEventListener('pageshow', e => {
-		container.classList.remove('transparent');
+		wrapper.classList.remove('transparent');
+		drawer.classList.remove('transparent');
 	});
 }
 
