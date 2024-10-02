@@ -155,7 +155,7 @@ aside#drawer.activated {
 }
 
 header#drawerHeader,nav#navigation {
-	transition-property: translate opacity;
+	transition-property: translate,opacity;
 	transition-duration: 1s;
 	transition-timing-function: var(--easeOutExpo);
 }
@@ -190,10 +190,7 @@ nav#navigation a {
 nav#navigation a:hover { color: #ccc; }
 nav#navigation a:active { color: #aaa; }
 
-#contents {
-	font-size: 18px;
-	overflow: clip;
-}
+#contents { font-size: 18px; }
 
 #body {
 	padding-bottom: 2.5em;
@@ -265,21 +262,9 @@ h1.title {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-	*:not(nav#navigation, nav#navigation li, #contents) {
+	aside#drawer, #container{
 		animation: none !important;
 		transition: none !important;
-	}
-
-	#contents {
-		animation: none !important;
-	}
-
-	nav#navigation li {
-		transition-property: opacity !important;
-	}
-
-	header#drawerHeader.prepared,nav#navigation.prepared {
-		transform: none !important;
 	}
 }
 
