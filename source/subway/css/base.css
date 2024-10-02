@@ -148,7 +148,7 @@ aside#drawer {
 	left: 100%;
 	z-index: 1;
 	transition: opacity .1s linear, left 1s var(--easeOutExpo);
-	padding: 80px 20px;
+	padding: 80px 40px;
 }
 
 aside#drawer.activated {
