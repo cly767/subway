@@ -36,7 +36,6 @@ function setupNavigation() {
 		navigationEnter.removeEventListener('click', enterNavigation);
 		navigationEnter.addEventListener('click', leaveNavigation);
 		attachOverlay();
-		container.classList.add('pressed');
 		drawer.classList.add('activated');
 		shift1by1(drawer.children);
 	}
@@ -48,7 +47,6 @@ function setupNavigation() {
 		navigationEnter.addEventListener('click', enterNavigation);
 		restoreShift(drawer.children);
 		drawer.classList.remove('activated');
-		container.classList.remove('pressed');
 		overlay.remove();
 	}
 
