@@ -141,10 +141,10 @@ a:active:not(a.button) { color: #888; }
 aside#drawer {
 	color: #ddd;
 	background-color: #1e1e1e;
-	border-left: 2px solid #ddd;
 	width: 500px;
 	height: 100%;
 	position: fixed;
+	overflow: auto;
 	left: 100%;
 	z-index: 1;
 	transition: opacity .1s linear, left 1s var(--easeOutExpo);
