@@ -11,22 +11,18 @@
 	</title>
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width"/>
-	<!-- Roboto from Google Fonts -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Roboto+Mono"/>
-	<!-- Noto Sans SC from Google Fonts -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,400,700"/>
 
-	<link rel="stylesheet" href="/subway/css/base.css"/>
-	<link rel="stylesheet" href="/subway/css/dark.css"/>
+	<link rel="stylesheet" href="<%= url_for('subway/css/base.css') %>"/>
+	<link rel="stylesheet" href="<%= url_for('subway/css/dark.css') %>"/>
 	<% if(is_home()) { %>
-	<link rel="stylesheet" href="/subway/css/index.css"/>
+	<link rel="stylesheet" href="<%= url_for('subway/css/index.css') %>"/>
 	<% } else if(is_post() || is_page()) { %>
-	<link rel="stylesheet" href="/subway/css/post.css"/>
+	<link rel="stylesheet" href="<%= url_for('subway/css/post.css') %>"/>
 	<% } %>
 
-	<link rel="prefetch" href="/subway/js/navigation.js"/>
-	<link rel="prefetch" href="/subway/js/anchor.js"/>
+	<link rel="prefetch" href="<%= url_for('subway/js/navigation.js') %>"/>
+	<link rel="prefetch" href="<%= url_for('subway/js/anchor.js') %>"/>
 	<% if(is_post() || is_page()) { %>
-	<link rel="prefetch" href="/subway/js/copyCode.js"/>
+	<link rel="prefetch" href="<%= url_for('subway/js/copyCode.js') %>"/>
 	<% } %>
 </head>

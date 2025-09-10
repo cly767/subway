@@ -12,12 +12,12 @@
 	<nav id="navigation" class="prepared">
 		<ul id="siteLinks">
 			<% theme.links.forEach(item => { %>
-			<li><a href="<%- item.href %>"<% if(item.external) { %> target="_blank"<% } %>><%- item.name %></a></li>
+			<li><a href="<%- url_for(item.href) %>"<% if(item.external) { %> target="_blank"<% } %>><%- item.name %></a></li>
 			<% }) %>
 		</ul>
 		<ul id="notes">
 			<% theme.notes.forEach(item => { %>
-			<li><a <% if(item.href) { %>href="<%- item.href %>"<% } %><% if(item.external) { %> target="_blank"<% } %>><%- item.content %></a><% if(item !== theme.notes[theme.notes.length - 1]) { %> | <% } _%></li>
+			<li><a <% if(item.href) { %>href="<%- url_for(item.href) %>"<% } %><% if(item.external) { %> target="_blank"<% } %>><%- item.content %></a><% if(item !== theme.notes[theme.notes.length - 1]) { %> | <% } _%></li>
 			<% }) %>
 		</ul>
 	</nav>

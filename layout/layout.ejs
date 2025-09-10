@@ -10,9 +10,9 @@
 			</div>
 		</div>
 	</body>
-	<script src="/subway/js/navigation.js"></script>
-	<script src="/subway/js/anchor.js"></script>
+	<script src="<%- url_for('subway/js/navigation.js') %>"></script>
+	<script src="<%- url_for('subway/js/anchor.js') %>"></script>
 	<% if(is_post() || is_page()) { %>
-		<script src="/subway/js/copyCode.js"></script>
+		<script src="<%- url_for('subway/js/copyCode.js') %>"></script>
 	<% } %>
 </html>
