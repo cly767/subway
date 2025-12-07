@@ -4,17 +4,6 @@
 	--codeFgColor: black;
 }
 
-@media screen and (prefers-color-scheme: dark) {
-	:root {
-		--codeBgColor: #333;
-		--codeFgColor: white;
-	}
-
-	article img {
-		filter: brightness(.67);
-	}
-}
-
 article p,ol,ul,hr,table,dl {
 	margin-bottom: 1.25em;
 }
@@ -116,4 +105,20 @@ article del::selection {
 article input[type="checkbox"] {
 	width: 1.2em;
 	height: 1.2em;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+	:root {
+		--codeBgColor: #333;
+		--codeFgColor: white;
+	}
+
+	article img {
+		filter: brightness(.67);
+	}
+
+	article figure table {
+		--selectBgColor: black;
+		--selectFgColor: white;
+	}
 }

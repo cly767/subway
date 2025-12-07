@@ -8,11 +8,11 @@
 		--selectFgColor: #1e1e1e;
 	}
 
-	button:hover {
+	button:hover, .button:hover {
 		background-color: #333;
 	}
 
-	button:active {
+	button:active, .button:active {
 		background-color: var(--fgColor);
 		color: var(--bgColor);
 	}
