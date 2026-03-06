@@ -76,6 +76,7 @@ article code {
 	--selectBgColor: black;
 	--selectFgColor: white;
 	padding: 0 0.12em;
+	overflow-wrap: break-word;
 }
 
 article ol,ul {
