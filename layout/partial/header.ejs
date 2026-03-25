@@ -1,14 +1,15 @@
 <header>
 	<div class="titleWrapper">
 		<h1 class="title">
-			<% if(is_home()) { %>
-				<%= config.title %>
-			<% } else { %>
-				<%= page.title %>
-			<% } %>
+			<% if(is_home()) { %><%= config.title %>
+			<% } else if(is_page() || is_post()) { %><%= page.title %>
+			<% } else if(is_archive()) { %>Archive<% } %>
 		</h1>
-		<% if(is_post() || is_page()) { %>
-		<div class="date"><%- page.date.format('MMM DD, YYYY') %></div>
+		<% if(!is_home()) { %>
+		<div class="subtitle">
+			<% if(is_post() || is_page()) { %><%- page.date.format('MMM DD, YYYY') %>
+			<% } else if(is_archive()) { %>Total <%- site.posts.length %> articles <% } %>
+		</div>
 		<% } %>
 	</div>
 	<div class="separator"></div>

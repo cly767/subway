@@ -1,13 +1,7 @@
 <head>
 	<title>
-		<% if(is_home()) { %>
-			<%= config.title %>
-			<% if(config.subtitle !== '') { %>
-				| <%= config.subtitle %>
-			<% } %>
-		<% } else { %>
-			<%= page.title %> | <%= config.title %>
-		<% } %>
+		<% if(is_home()) { %><%= config.title %><% if(config.subtitle !== '') { %><%= config.subtitle %><% } %>
+		<% } else { %><% if(is_archive()) { %>Archive<% } else { %><%= page.title %><% } %> | <%= config.title %> <% } %>
 	</title>
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width"/>
@@ -20,6 +14,8 @@
 	<link rel="stylesheet" href="<%= url_for('subway/css/dark.css') %>"/>
 	<% if(is_home()) { %>
 	<link rel="stylesheet" href="<%= url_for('subway/css/index.css') %>"/>
+	<% } else if(is_archive()) { %>
+	<link rel="stylesheet" href="<%= url_for('subway/css/archive.css') %>"/>
 	<% } else if(is_post() || is_page()) { %>
 	<link rel="stylesheet" href="<%= url_for('subway/css/post.css') %>"/>
 	<% } %>

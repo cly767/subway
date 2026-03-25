@@ -1,0 +1,49 @@
+a { text-decoration: none;}
+
+div.yearHeader {
+    font-size: 22px;
+    font-weight: 100;
+}
+
+ul.postList {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul.postList li {
+    margin: 0.6em;
+}
+
+ul.postList li:last-child {
+    margin-bottom: 1em;
+}
+
+ul.postList li + div.yearHeader {
+    margin-top: 1em;
+}
+
+article.entry {
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+article.entry a {
+    padding-inline-end: 0.6em;
+}
+
+div.date {
+    font-size: 14px;
+    color: gray;
+}
+
+#paginator-indicator {
+	padding: 0.7em;
+}
+
+#paginator-controls {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}

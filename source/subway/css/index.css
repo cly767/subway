@@ -1,11 +1,16 @@
-a {
-	text-decoration: none;
+a { text-decoration: none; }
+
+ul.postList li {
+	margin-bottom: 2.2em;
 }
 
-.entry {
+ul.postList li:last-child {
+	margin-bottom: 1em;
+}
+
+article.entry a {
 	font-size: 48px;
 	font-weight: 100;
-	margin-bottom: 1em;
 }
 
 .postList {
@@ -13,7 +18,7 @@ a {
 	padding-left: 0;
 }
 
-#indicator {
+#paginator-indicator {
 	padding: 0.7em;
 }
 

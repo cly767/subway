@@ -1,10 +1,15 @@
 <main id="contents">
 	<ul class="postList">
-		<% page.posts.forEach(function(item) { %>
+        <% let prev_year = -1;
+        page.posts.forEach((item) => {
+            if(item.date.year() != prev_year) {
+                prev_year = item.date.year(); %>
+        <div class="yearHeader"><%- prev_year %></div>
+        <% } %>
 		<li>
 			<article class="entry">
 			<a href="<%- url_for(item.path) %>"><%- item.title %></a>
-			<div class="subtitle"><%- item.date.format('MMM DD, YYYY') %></div>
+			<div class="date"><%- item.date.format('MMM DD, YYYY') %></div>
 			</article>
 		</li>
 		<% }) %>
