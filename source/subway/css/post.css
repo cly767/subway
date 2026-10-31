@@ -135,9 +135,7 @@ article input[type="checkbox"] {
 
 @media print {
 
-	article h1,
-	h2,
-	h3 a::after {
+	article :is(h1, h2, h3) a::after {
 		content: none;
 	}
 }
