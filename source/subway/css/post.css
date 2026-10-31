@@ -4,7 +4,12 @@
 	--codeFgColor: black;
 }
 
-article p,ol,ul,hr,table,dl {
+article p,
+ol,
+ul,
+hr,
+table,
+dl {
 	margin-bottom: 1.25em;
 }
 
@@ -23,15 +28,17 @@ article h3 {
 	font-weight: 100;
 }
 
-article h1,h2,h3 {
+article h1,
+h2,
+h3 {
 	margin-top: 1em;
 	margin-bottom: 0.6em;
 }
 
 article h1:first-child,
-		h2:first-child,
-		h3:first-child {
-			margin-top: 0;
+h2:first-child,
+h3:first-child {
+	margin-top: 0;
 }
 
 article img {
@@ -65,7 +72,8 @@ article figure pre {
 	padding: 10px;
 }
 
-article code,pre {
+article code,
+pre {
 	font-family: 'Roboto Mono', 'Courier New', Courier, monospace;
 	line-height: 23px;
 }
@@ -79,7 +87,8 @@ article code {
 	overflow-wrap: break-word;
 }
 
-article ol,ul {
+article ol,
+ul {
 	padding-left: 1em;
 }
 
@@ -89,7 +98,7 @@ article table {
 	display: block;
 }
 
-article > table * {
+article>table * {
 	border: 2px solid var(--bgSecondary);
 	padding: 6px 13px;
 }
@@ -121,5 +130,14 @@ article input[type="checkbox"] {
 	article figure table {
 		--selectBgColor: black;
 		--selectFgColor: white;
+	}
+}
+
+@media print {
+
+	article h1,
+	h2,
+	h3 a::after {
+		content: none;
 	}
 }
